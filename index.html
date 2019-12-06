@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Accumurate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="client.js"></script>
+</head>
+
+<style>
+    .table {
+        height: 50px;
+        width: 300px;
+    }
+
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    .tg td {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: black;
+    }
+
+    .tg th {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: black;
+    }
+
+    .tg .tg-cly1 {
+        text-align: left;
+        vertical-align: middle
+    }
+
+    .tg .tg-0lax {
+        text-align: left;
+        vertical-align: top
+    }
+</style>
+
+<body>
+    <center>
+        <div id="time"></div>
+        <br>
+        <table class="tg">
+            <tr>
+                <th class="tg-cly1"></th>
+                <th id="tg-cly1">時間</th>
+                <th id="tg-cly1">個数</th>
+                <th id="tg-cly1">充填量</th>
+            </tr>
+            <tr>
+                <td class="tg-0lax">010</td>
+                <td id="time_010"></td>
+                <td id="count_010"></td>
+                <td id="amount_010"></td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">020</td>
+                <td id="time_020"></td>
+                <td id="count_020"></td>
+                <td id="amount_020"></td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">050</td>
+                <td id="time_050"></td>
+                <td id="count_050"></td>
+                <td id="amount_050"></td>
+            </tr>
+        </table>
+    </center>
+
+    <center>
+        <div id="timeline"></div>
+        <div id="table"></div>
+    </center>
+</body>
+
+</html>
