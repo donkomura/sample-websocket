@@ -20,9 +20,6 @@ with open(filename, 'r') as f:
         send_data = json.dumps(line)
         ws.send(send_data)
         logger.info("Sent")
-        logger.info("Receiving...")
-        result = ws.recv()
-        logger.info("Received '{}'".format(result))
         time.sleep(1)
 
 ws.close()

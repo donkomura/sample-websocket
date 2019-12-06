@@ -18,22 +18,9 @@ function onMessage(event) {
     // addRow(data);
 }
 
-function websocketSend(data) {
-    //Send data
-    connection.send(data);
-}
-
-function prepareSend() {
-    var form = document.forms.form;
-    if (form.message.value != "") {
-        websocketSend(form.message.value);
-    }
-}
-
 function updateContent(data) {
     var json_data = JSON.parse(JSON.parse(data));
     var container = json_data.container;
-    console.log(typeof(json_data), json_data);
     if (json_data.connection == 1) {
         return
     }
@@ -50,10 +37,6 @@ function addRow(data) {
     a.appendChild(text);
     table.appendChild(a);
     table.appendChild(br);
-}
-
-function convertToString(data) {
-
 }
 
 function JSONMaker(strData) {
