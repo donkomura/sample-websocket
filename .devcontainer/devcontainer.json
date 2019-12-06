@@ -1,6 +1,8 @@
 {
 	"name": "Python Sample",
-	"dockerFile": "Dockerfile",
+	"dockerComposeFile": "../docker-compose.yaml",
+	"service": "app",
+	"workspaceFolder": "/app",
 
 	// Use 'appPort' to create a container with published ports. If the port isn't working, be sure
 	// your server accepts connections from all interfaces (0.0.0.0 or '*'), not just localhost.
@@ -22,7 +24,7 @@
 	},
 
 	// Specifies a command to run after the container is created
-	"postCreateCommand": "sudo pip install -r requirements.txt",
+	// "postCreateCommand": "sudo pip install -r requirements.txt",
 
 	"extensions": [
 		"ms-python.python"

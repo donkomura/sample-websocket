@@ -35,7 +35,8 @@ RUN apt-get update \
     && apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
-
+COPY ./requirements.txt /requirements.txt
+RUN pip install -r /requirements.txt
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=
 
