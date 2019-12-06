@@ -15,7 +15,6 @@ function onMessage(event) {
     //Incoming data
     console.log(event.data);
     updateContent(event.data);
-    // addRow(data);
 }
 
 function updateContent(data) {
@@ -24,6 +23,7 @@ function updateContent(data) {
     if (json_data.connection == 1) {
         return
     }
+    addRow(json_data.container + ": " + json_data.time + "|" + json_data.count + "|" + json_data.amount);
     document.getElementById("time_" + container).innerHTML = json_data.time;
     document.getElementById("count_" + container).innerHTML = json_data.count;
     document.getElementById("amount_" + container).innerHTML = json_data.amount;
